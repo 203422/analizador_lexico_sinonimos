@@ -1,0 +1,95 @@
+:root {
+    --font: "Raleway", sans-serif;
+    --purple: #5C5470;
+    --black: #222831;
+    --purpleBlack: #7d768d;
+    --lightPurple: #B9B4C7;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 1.4rem;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    width: 90%;
+}
+
+.container_text {
+    margin-top: 2rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+button {
+    font-family: var(--font);
+    width: 100%;
+    border: none;
+    padding: 2rem 4rem;
+    border-radius: .5rem;
+    background-color: var(--purple);
+    font-weight: 700;
+    color: var(--white);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    height: 15rem;
+    padding: 10px;
+    border: 1px solid #3f3b6c69;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.title {
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #3f3b6c69;
+    font-family: var(--font);
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #3f3b6c69;
+    padding: 8px;
+    text-align: left;
+    font-weight: 300;
+}
+
+.styled-table th {
+    background-color: var(--purpleBlack);
+    color: var(--white);
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: var(--lightPurple);
+}

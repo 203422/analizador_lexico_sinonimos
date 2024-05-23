@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Analizador léxico</title>
+</head>
+
+<body>
+
+    <main class="main container">
+
+        <div class="container_text">
+            <p class="title">Ingresa el cadena a analizar</p>
+            <form method="POST" enctype="multipart/form-data" class="form_text">
+                <textarea name="texto" placeholder="Escribe aquí..." rows="10" cols="50">{{ texto }}</textarea>
+                <button type="submit">Analizar</button>
+            </form>
+        </div>
+
+        {% if detalles %}
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Cadena de Entrada</th>
+                        <th>Cadena Resultante</th>
+                        <th>Palabras Cambiadas</th>
+                        <th>Números</th>
+                        <th>Símbolos</th>
+                        <th>Línea</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for detalle in detalles %}
+                    <tr>
+                        <td>{{ detalle[0] }}</td>
+                        <td>{{ detalle[1] }}</td>
+                        <td>{{ detalle[2] }}</td>
+                        <td>{{ detalle[3] }}</td>
+                        <td>{{ detalle[4] }}</td>
+                        <td>{{ detalle[5] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+
+    </main>
+
+
+</body>
+
+</html>
